@@ -46,6 +46,7 @@ body {
         font-size: 70px;
     }
     &_minutes, &_hours {
+        width: fit-content;
         margin-left: 2px;
         margin-right: 2px;
     }

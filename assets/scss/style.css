@@ -51,6 +51,9 @@ body {
   font-size: 70px;
 }
 .timer_minutes, .timer_hours {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-left: 2px;
   margin-right: 2px;
 }
