@@ -1,9 +1,14 @@
+let is24H = true;
+
 const calendarDay = document.querySelector('.calendar_day_txt');
 const calendarTodayDay = document.querySelector('.calendar_month_day_txt');
 const calendarMonth = document.querySelector('.calendar_month_month_txt');
 const calendarYear = document.querySelector('.calendar_year_txt');
 
 const timerHours = document.querySelector('.timer_hours');
+timerHours.addEventListener('click', () => {
+    is24H = !is24H;
+})
 const timerMinutes = document.querySelector('.timer_minutes');
 const timerSeconds = document.querySelector('.timer_seconds');
 const days = [
@@ -32,6 +37,10 @@ const updateCalendar = () => {
     calendarYear.innerText = date.getFullYear();
 
     let h = date.getHours();
+    if(!is24H)
+    {
+        h %= 12;
+    }
     let m = date.getMinutes();
     let s = date.getSeconds();
     timerHours.innerHTML = h < 10 ? `0${h}` : h;
