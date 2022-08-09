@@ -8,15 +8,26 @@ $namun-font: NanumGothic, sans-serif;
 body {
     background-color: #eaeaea;
 }
+.calendar {
+    
+    &_month {
+        background-color: #fff;
+        color: #e6e6e6;
+        border-color: #e6e6e6;
+        p {
+            color: #7c7c7c;
+        }
+    }
+    &_day, &_year {
+        background-color: #b03737;
+        color: #962f2f;
+        border-color: #962f2f;
+        p {
+            color: #fff;
+        }
+    }
+}
 
-.calendar_month {
-    color: #7c7c7c;
-    background-color: #fff;
-}
-.calendar_day, .calendar_year {
-    color: #fff;
-    background-color: #b03737;
-}
 .timer_dots_dot {
     background-color: #474747;
 }
@@ -86,11 +97,21 @@ body {
             margin: auto;
         }
     }
+    &_month {
+        border-left: solid 5px;
+        border-right: solid 5px;
+    }
     &_day {
+        border-left: solid 5px;
+        border-right: solid 5px;
+        border-top: solid 5px;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
     }
     &_year {
+        border-left: solid 5px;
+        border-right: solid 5px;
+        border-bottom: solid 5px;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
     }
