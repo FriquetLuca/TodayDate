@@ -1,0 +1,96 @@
+@import url('../fonts/NanumGothic-Bold.ttf');
+$namun-font: NanumGothic, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $namun-font;
+}
+body {
+    background-color: #eaeaea;
+}
+
+.calendar_month {
+    color: #7c7c7c;
+    background-color: #fff;
+}
+.calendar_day, .calendar_year {
+    color: #fff;
+    background-color: #b03737;
+}
+.timer_dots_dot {
+    background-color: #474747;
+}
+.timer {
+    color: #474747;
+}
+
+.timeshow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    transform: translateY(50%);
+    gap: 25px;
+}
+.timer {
+    font-size: 100px;
+    width: 300px;
+    display: flex;
+    flex-flow: row nowrap;
+    &_seconds {
+        margin-left: 4px;
+        margin-top: 30px;
+        bottom: 0;
+        font-size: 70px;
+    }
+    &_minutes, &_hours {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    &_dots {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+        &_dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 25px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+    }
+}
+.calendar {
+    width: 250px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    &_month {
+        font-size: 75px;
+        p {
+            width: fit-content;
+            margin: auto;
+            font-weight: bolder;
+        }
+    }
+    &_day, &_year {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 40px;
+        p {
+            width: fit-content;
+            margin: auto;
+        }
+    }
+    &_day {
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    &_year {
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+}
