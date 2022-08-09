@@ -5,34 +5,47 @@ $namun-font: NanumGothic, sans-serif;
     padding: 0;
     font-family: $namun-font;
 }
-body {
+body.light {
     background-color: #eaeaea;
 }
-.calendar {
-    
-    &_month {
-        background-color: #fff;
-        color: #e6e6e6;
-        border-color: #e6e6e6;
-        p {
-            color: #7c7c7c;
-        }
-    }
-    &_day, &_year {
-        background-color: #b03737;
-        color: #962f2f;
-        border-color: #962f2f;
-        p {
-            color: #fff;
-        }
+body.dark {
+    background-color: #151515;
+}
+.calendar_month.light {
+    background-color: #fff;
+    color: #e6e6e6;
+    border-color: #e6e6e6;
+    p.light {
+        color: #7c7c7c;
     }
 }
-
-.timer_dots_dot {
+.calendar_month.dark {
+    background-color: #000;
+    color: #1a1a1a;
+    border-color: #1a1a1a;
+    p.dark {
+        color: #b8b8b8;
+    }
+}
+.calendar_day.light, .calendar_year.light, .calendar_day.dark, .calendar_year.dark {
+    background-color: #b03737;
+    color: #962f2f;
+    border-color: #962f2f;
+    p.light, p.dark {
+        color: #fff;
+    }
+}
+.timer_dots_dot.light {
     background-color: #474747;
 }
-.timer {
+.timer_dots_dot.dark {
+    background-color: #b8b8b8;
+}
+.timer.light {
     color: #474747;
+}
+.timer.dark {
+    color: #b8b8b8;
 }
 
 .timeshow {

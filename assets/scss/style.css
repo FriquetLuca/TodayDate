@@ -5,33 +5,55 @@
   font-family: NanumGothic, sans-serif;
 }
 
-body {
+body.light {
   background-color: #eaeaea;
 }
 
-.calendar_month {
+body.dark {
+  background-color: #151515;
+}
+
+.calendar_month.light {
   background-color: #fff;
   color: #e6e6e6;
   border-color: #e6e6e6;
 }
-.calendar_month p {
+.calendar_month.light p.light {
   color: #7c7c7c;
 }
-.calendar_day, .calendar_year {
+
+.calendar_month.dark {
+  background-color: #000;
+  color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+.calendar_month.dark p.dark {
+  color: #b8b8b8;
+}
+
+.calendar_day.light, .calendar_year.light, .calendar_day.dark, .calendar_year.dark {
   background-color: #b03737;
   color: #962f2f;
   border-color: #962f2f;
 }
-.calendar_day p, .calendar_year p {
+.calendar_day.light p.light, .calendar_day.light p.dark, .calendar_year.light p.light, .calendar_year.light p.dark, .calendar_day.dark p.light, .calendar_day.dark p.dark, .calendar_year.dark p.light, .calendar_year.dark p.dark {
   color: #fff;
 }
 
-.timer_dots_dot {
+.timer_dots_dot.light {
   background-color: #474747;
 }
 
-.timer {
+.timer_dots_dot.dark {
+  background-color: #b8b8b8;
+}
+
+.timer.light {
   color: #474747;
+}
+
+.timer.dark {
+  color: #b8b8b8;
 }
 
 .timeshow {

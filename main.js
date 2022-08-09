@@ -1,16 +1,28 @@
 let is24H = true;
+let dark = false;
 
+const calendar = document.querySelector('.calendar');
 const calendarDay = document.querySelector('.calendar_day_txt');
 const calendarTodayDay = document.querySelector('.calendar_month_day_txt');
 const calendarMonth = document.querySelector('.calendar_month_month_txt');
 const calendarYear = document.querySelector('.calendar_year_txt');
 
 const timerHours = document.querySelector('.timer_hours');
+const timerMinutes = document.querySelector('.timer_minutes');
+const timerSeconds = document.querySelector('.timer_seconds');
+
+calendar.addEventListener('click', () => {
+    dark = !dark;
+    const elemsDark = document.querySelectorAll(dark ? '.light' : '.dark');
+    for(const e of elemsDark)
+    {
+        e.classList.add(dark ? 'dark' : 'light');
+        e.classList.remove(dark ? 'light' : 'dark');
+    }
+})
 timerHours.addEventListener('click', () => {
     is24H = !is24H;
 })
-const timerMinutes = document.querySelector('.timer_minutes');
-const timerSeconds = document.querySelector('.timer_seconds');
 const days = [
     'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'
 ];
