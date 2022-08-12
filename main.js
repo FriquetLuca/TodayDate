@@ -45,7 +45,7 @@ const updateCalendar = () => {
     let date = new Date();
     calendarDay.innerText = days[date.getDay()];
     calendarTodayDay.innerText = date.getDate();
-    calendarMonth.innerText = month[date.getMonth()]
+    calendarMonth.innerText = month[date.getMonth()];
     calendarYear.innerText = date.getFullYear();
 
     let h = date.getHours();
